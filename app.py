@@ -15,7 +15,12 @@ def start_play():  #game choosing
     "2. Guess Game - guess a number and see if you chose like the computer\n"
     "3. Currency Roulette - try and guess the value of a random amount of USD in ILS")
 
-    user_game_input = int(input(colorama.Fore.LIGHTBLUE_EX + "Please choose a game to play from 1-3: "))
+    try:
+        user_game_input = int(input(colorama.Fore.LIGHTBLUE_EX + "Please choose a game to play from 1-3: "))
+    except ValueError:
+        print(colorama.Fore.RED + "Invalid input. Please enter a numeric value.")
+        return start_play()
+
     if user_game_input == 1:
          print(colorama.Fore.LIGHTBLUE_EX + "You choose: 1.Memory Game\n",
                colorama.Fore.CYAN + "Soon sequence of numbers will appear for 1 second and you have to guess it back")
@@ -33,7 +38,8 @@ def start_play():  #game choosing
          return(start_play())
 
     #choose difficult
-    game_difficulty = int(input(colorama.Fore.LIGHTBLUE_EX + "Please choose game difficulty from 1 to 5 to go back choose 0: "))
+    game_difficulty = input(colorama.Fore.LIGHTBLUE_EX + "Please choose game difficulty from 1 to 5 to go back choose 0: ")
+
     if game_difficulty == 1:
         print("You choose difficult level 1\n""Good Luck")
         print("Game Is Loading... Please Wait")
@@ -93,11 +99,15 @@ def start_play():  #game choosing
         print(colorama.Fore.MAGENTA + "You choose to go back")
         return(start_play())
 
-    elif game_difficulty != int:
-        print(colorama.Fore.MAGENTA + "You choose an invalid character")
-        return(start_play())
-
     else:
-        print(colorama.Fore.RED + "You choose an invalid number")
-        return(start_play())
+         if game_difficulty != int():
+             print(colorama.Fore.RED + "Invalid input. Please enter a valid difficulty level.")
+             return (start_play())
+
+         elif game_difficulty != [0,1,2,3,4,5]:
+            print(colorama.Fore.RED + "You choose an invalid number")
+            return(start_play())
+
+
+
 
