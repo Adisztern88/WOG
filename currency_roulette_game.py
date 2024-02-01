@@ -1,6 +1,7 @@
 import requests
 from colorama import Fore
 import random
+import Score
 
 api_url = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json"
 
@@ -16,6 +17,7 @@ def difficulty_1():
 
     if g_number == computer_number:
         print(Fore.GREEN + "Good job You Win!!!")
+        Score.add_score(1)
     else:
         print(Fore.RED + f"Game Over-You guessed the wrong number!!!\nThe number was:{computer_number}")
 
@@ -27,6 +29,7 @@ def difficulty_2():
 
     if g_number == computer_number:
         print(Fore.GREEN + "Good job You Win!!!")
+        Score.add_score(2)
     else:
         print(Fore.RED + f"Game Over-You guessed the wrong number!!!\nThe number was:{computer_number}")
 
@@ -37,6 +40,7 @@ def difficulty_3():
 
     if g_number == computer_number:
         print(Fore.GREEN + "Good job You Win!!!")
+        Score.add_score(3)
     else:
         print(Fore.RED + f"Game Over-You guessed the wrong number!!!\nThe number was:{computer_number}")
 def difficulty_4():
@@ -46,6 +50,7 @@ def difficulty_4():
 
     if g_number == computer_number:
         print(Fore.GREEN + "Good job You Win!!!")
+        Score.add_score(4)
     else:
         print(Fore.RED + f"Game Over-You guessed the wrong number!!!\nThe number was:{computer_number}")
 def difficulty_5():
@@ -55,6 +60,7 @@ def difficulty_5():
 
     if g_number == computer_number:
         print(Fore.GREEN + "Good job You Win!!!")
+        Score.add_score(5)
     else:
         print(Fore.RED + f"Game Over-You guessed the wrong number!!!\nThe number was:{computer_number}")
 

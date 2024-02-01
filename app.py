@@ -1,5 +1,7 @@
 
 import colorama
+
+import Score
 import guess_game
 import memory_game
 import currency_roulette_game
@@ -40,7 +42,7 @@ def start_play():  #game choosing
     #choose difficult
     game_difficulty = input(colorama.Fore.LIGHTBLUE_EX + "Please choose game difficulty from 1 to 5 to go back choose 0: ")
 
-    if game_difficulty == 1:
+    if game_difficulty == "1":
         print("You choose difficult level 1\n""Good Luck")
         print("Game Is Loading... Please Wait")
         time.sleep(2)
@@ -51,7 +53,7 @@ def start_play():  #game choosing
         elif user_game_input == 3:
             currency_roulette_game.difficulty_1()
 
-    elif game_difficulty == 2:
+    elif game_difficulty == "2":
         print("You choose difficult level 2\n""Good Luck")
         print("Game Is Loading... Please Wait")
         time.sleep(2)
@@ -62,7 +64,7 @@ def start_play():  #game choosing
         elif user_game_input == 3:
             currency_roulette_game.difficulty_2()
 
-    elif game_difficulty == 3:
+    elif game_difficulty == "3":
         print("You choose difficult level 3\n""Good Luck")
         print("Game Is Loading... Please Wait")
         time.sleep(2)
@@ -73,7 +75,7 @@ def start_play():  #game choosing
         elif user_game_input == 3:
             currency_roulette_game.difficulty_3()
 
-    elif game_difficulty == 4:
+    elif game_difficulty == "4":
         print("You choose difficult level 4\n""Good Luck")
         print("Game Is Loading... Please Wait")
         time.sleep(2)
@@ -84,7 +86,7 @@ def start_play():  #game choosing
         elif user_game_input == 3:
             currency_roulette_game.difficulty_4()
 
-    elif game_difficulty == 5:
+    elif game_difficulty == "5":
         print("You choose difficult level 5\n""Good Luck")
         print("Game Is Loading... Please Wait")
         time.sleep(2)
@@ -95,7 +97,7 @@ def start_play():  #game choosing
         elif user_game_input == 3:
             currency_roulette_game.difficulty_5()
 
-    elif game_difficulty == 0:
+    elif game_difficulty == "0":
         print(colorama.Fore.MAGENTA + "You choose to go back")
         return(start_play())
 

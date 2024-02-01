@@ -1,6 +1,7 @@
 import random
 import time
 from colorama import Fore
+import Score
 
 def difficulty_1():
     secret_number = random.randint(1, 101) #generate_number
@@ -10,6 +11,7 @@ def difficulty_1():
     g_number = int(input("Try guessing the number: ")) #get_guess_from_user
     if g_number == secret_number:
         print(Fore.GREEN + "Good job You Win!!!")
+        Score.add_score(1)
     else:
         print(Fore.RED + f"Game Over-You guessed the wrong number!!!\nThe number was:{secret_number}")
 
@@ -28,6 +30,7 @@ def difficulty_2():
 
     if user_guesses == secret_number: #compare_results
         print(Fore.GREEN + "Good job You Win!!!")
+        Score.add_score(2)
     else:
         print(Fore.RED + f"Game Over-You guessed the wrong numbers!!!\nThe numbers were:{secret_number}")
 
@@ -46,6 +49,7 @@ def difficulty_3():
 
     if user_guesses == secret_number:
         print(Fore.GREEN + "Good job You Win!!!")
+        Score.add_score(3)
     else:
         print(Fore.RED + f"Game Over-You guessed the wrong numbers!!!\nThe numbers were:{secret_number}")
 
@@ -64,6 +68,7 @@ def difficulty_4():
 
     if user_guesses == secret_number:
         print(Fore.GREEN + "Good job You Win!!!")
+        Score.add_score(4)
     else:
         print(Fore.RED + f"Game Over-You guessed the wrong numbers!!!\nThe numbers were:{secret_number}")
 
@@ -82,6 +87,7 @@ def difficulty_5():
 
     if user_guesses == secret_number:
         print(Fore.GREEN + "Good job You Win!!!")
+        Score.add_score(5)
     else:
         print(Fore.RED + f"Game Over-You guessed the wrong numbers!!!\nThe numbers were:{secret_number}")
 

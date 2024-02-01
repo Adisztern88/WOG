@@ -1,11 +1,13 @@
 import random
 from colorama import Fore
+import Score
 
 def difficulty_1():
     computer_number = random.randint(1, 10)  # generate_number
     g_number = int(input("Try guessing the number: "))  # get_guess_from_user
     if g_number == computer_number:
         print(Fore.GREEN + "Good job You Win!!!")
+        Score.add_score(1)
     else:
         print(Fore.RED + f"Game Over-You guessed the wrong number!!!\nThe number was:{computer_number}")
 
@@ -14,6 +16,7 @@ def difficulty_2():
     g_number = int(input("Try guessing the number: "))  # get_guess_from_user
     if g_number == computer_number:
         print(Fore.GREEN + "Good job You Win!!!")
+        Score.add_score(2)
     else:
         print(Fore.RED + f"Game Over-You guessed the wrong number!!!\nThe number was:{computer_number}")
 
@@ -22,6 +25,7 @@ def difficulty_3():
     g_number = int(input("Try guessing the number: "))  # get_guess_from_user
     if g_number == computer_number:
         print(Fore.GREEN + "Good job You Win!!!")
+        Score.add_score(3)
     else:
         print(Fore.RED + f"Game Over-You guessed the wrong number!!!\nThe number was:{computer_number}")
 
@@ -31,6 +35,7 @@ def difficulty_4():
     g_number = int(input("Try guessing the number: "))  # get_guess_from_user
     if g_number == computer_number:
         print(Fore.GREEN + "Good job You Win!!!")
+        Score.add_score(4)
     else:
         print(Fore.RED + f"Game Over-You guessed the wrong number!!!\nThe number was:{computer_number}")
 
@@ -40,6 +45,7 @@ def difficulty_5():
     g_number = int(input("Try guessing the number: "))  # get_guess_from_user
     if g_number == computer_number:
         print(Fore.GREEN + "Good job You Win!!!")
+        Score.add_score(5)
     else:
         print(Fore.RED + f"Game Over-You guessed the wrong number!!!\nThe number was:{computer_number}")
 
