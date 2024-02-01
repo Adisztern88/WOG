@@ -32,7 +32,7 @@ def score_server():
                 <body>
                     <div id="score" style="color:red">{ERROR}</div>
                 </body>
-            </html>'''
+            </html>'''.format(ERROR=ERROR)
         return html_error_message
 app.run('0.0.0.0')
 
