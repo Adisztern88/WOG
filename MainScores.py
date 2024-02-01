@@ -1,4 +1,3 @@
-
 from flask import Flask
 import Utils
 
@@ -36,4 +35,3 @@ def score_server():
         return html_error_message
 app.run('0.0.0.0')
 
-score_server()

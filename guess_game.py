@@ -1,7 +1,6 @@
 import random
 from colorama import Fore
 import Score
-from app import welcome
 
 def difficulty_1():
     computer_number = random.randint(1, 10)  # generate_number
